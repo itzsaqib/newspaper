@@ -1,0 +1,6 @@
+<%= simple_form_for  @student do |f| %>
+  <%= f.input :first_name, label: "F name", hint: 'No special characters.' %>
+  <%= f.input :last_name %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.button :submit %>
+<% end %>

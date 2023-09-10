@@ -1,0 +1,17 @@
+<h1>All Students</h1>
+
+<% @students.each do |student| %>
+  <div>
+    <p>
+      <strong>First Name:</strong> <%= student.first_name %><br>
+      <strong>Last Name:</strong> <%= student.last_name %><br>
+      <strong>Email:</strong> <%= student.email %><br>
+      <strong>Address:</strong> <%= student.address %><br>
+    </p>
+    <%= link_to "Edit Detail", edit_student_path(student) %>
+    <%= link_to "Show Detail", student_path(student) %>
+    <%= button_to "Delete", student_path(student), method: :delete %>
+  </div>
+<% end %>
+
+<%= link_to "Add New Student Detail", new_student_path %>
